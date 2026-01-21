@@ -10,7 +10,8 @@ export const myProjects = [
       "Designed dynamic property listings with image uploads, detailed descriptions, and pricing information.",
       "Added CRUD functionality for listings and reviews, allowing users to create, edit, and delete their own content.",
     ],
-    href: "",
+    href: "https://miniairbnb-aom0.onrender.com/",
+    github: "https://github.com/Gursirat-Singh/MiniAirbnb",
     logo: "",
     image: "/assets/projects/SiraStay.png",
     tags: [
@@ -48,6 +49,7 @@ export const myProjects = [
       "Integrated routing and state management to handle multiple views and interactions efficiently.",
     ],
     href: "",
+    github: "https://github.com/Gursirat-Singh/Innopulse",
     logo: "",
     image: "/assets/projects/InnoPulse.png",
     tags: [
@@ -85,6 +87,7 @@ export const myProjects = [
       "Focused on clean UI design and smooth user interactions to enhance usability.",
     ],
     href: "",
+    github: "https://github.com/Gursirat-Singh/CelebrateMate",
     logo: "",
     image: "/assets/projects/CelebrateMaste.png",
     tags: [
@@ -114,19 +117,29 @@ export const myProjects = [
 
 export const mySocials = [
   {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
-  },
-  {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/gursirat22",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
+    href: "https://www.instagram.com/1_gursirat_1?igsh=MXJyNDBkZm5icHc2aA==",
     icon: "/assets/socials/instagram.svg",
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/9417672374",
+    icon: "/assets/socials/whatsApp.svg",
+  },
+  {
+    name: "LeetCode",
+    href: "https://leetcode.com/u/GursiratSingh/",
+    icon: "https://leetcode.com/static/images/LeetCode_logo.png",
+  },
+  {
+    name: "Codeforces",
+    href: "https://codeforces.com/profile/Gursirat",
+    icon: "https://imgs.search.brave.com/FTfc-oykeVSCrm5LFs_z03G2pA5uMlznkHQD6JFH0VE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aWNvbnM4LmNvbS9l/eHRlcm5hbC10YWwt/cmV2aXZvLWNvbG9y/LXRhbC1yZXZpdm8v/MTIwMC9leHRlcm5h/bC1jb2RlZm9yY2Vz/LXByb2dyYW1taW5n/LWNvbXBldGl0aW9u/cy1hbmQtY29udGVz/dHMtcHJvZ3JhbW1p/bmctY29tbXVuaXR5/LWxvZ28tY29sb3It/dGFsLXJldml2by5q/cGc",
   },
 ];
 

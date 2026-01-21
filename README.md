@@ -1,8 +1,8 @@
-# 🚀 3D Developer Portfolio
+# 🚀 Gursirat Singh - 3D Full-Stack Developer Portfolio
 
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
+A modern, animated 3D developer portfolio showcasing full-stack development skills. Built with React, Three.js, TailwindCSS, and motion effects — featuring interactive 3D elements, project showcases, and a responsive design that highlights innovative software solutions.
 
-![3d Portfolio Screenshot GitHub](https://github.com/user-attachments/assets/9b0ed20e-074e-4f2a-81d8-20c9da751e9e)
+![Portfolio Screenshot](https://github.com/Gursirat-Singh/Portfolio/blob/main/screenshot.png)
 
 ---
 
@@ -13,19 +13,26 @@ A modern, animated 3D developer portfolio built with React, Three.js, TailwindCS
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
 - [Assets](#-assets)
+- [Featured Projects](#-featured-projects)
+- [About Gursirat Singh](#-about-gursirat-singh)
 - [Contact Me](#-contact-me)
-- [Suggestions or Feedback](#-suggestions-or-feedback)
+- [Feedback & Support](#-feedback--support)
 - [Like This Project?](#-like-this-project)
 
 ---
 
 ## ✨ Features
 
-- 🔥 3D visuals powered by **React Three Fiber** and **Drei**
+- 🧑‍🚀 Interactive 3D astronaut model with **React Three Fiber** and **Drei**
+- 📅 Animated timeline showcasing development journey
+- 🎯 Detailed project showcase with individual project pages
+- 🌙 Theme context for dynamic theming
+- 🌌 Parallax backgrounds and particle animations
 - ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
 - 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form using **EmailJS**
-- 🧱 Beautiful UI enhancements with **Aceternity UI** and **Magic UI**
+- 💌 Working contact form with **EmailJS** integration
+- 📋 One-click email copying functionality
+- 🌀 Orbiting circles and flip word animations in hero section
 - 🚀 Lightning-fast development with **Vite**
 
 ---
@@ -69,7 +76,7 @@ A modern, animated 3D developer portfolio built with React, Three.js, TailwindCS
 ## 🚀 Getting Started
 1. Clone the Repository
 ```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
+git clone https://github.com/Gursirat-Singh/Portfolio.git
 cd Portfolio
 ```
 2. Install Dependencies
@@ -89,28 +96,55 @@ Assets used in the project can be found [here](https://github.com/user-attachmen
 
 ---
 
-## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/ali.sanatidev/reels/) 
-[![Static Badge](https://img.shields.io/badge/Youtube-%23FF0033?style=flat&logo=youtube)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-sanati/) 
+## 🏆 Featured Projects
+
+### SiraStay (Mini Airbnb)
+A full-stack accommodation booking platform inspired by Airbnb, enabling users to browse, list, and manage rental properties with secure authentication.
+- **Tech Stack**: HTML/EJS, Node.js, MongoDB, Express
+- **Live Demo**: [https://miniairbnb-aom0.onrender.com/](https://miniairbnb-aom0.onrender.com/)
+- **GitHub**: [https://github.com/Gursirat-Singh/MiniAirbnb](https://github.com/Gursirat-Singh/MiniAirbnb)
+
+### Innopulse
+A web platform designed to showcase and manage innovation-driven ideas and projects in a structured and user-friendly manner.
+- **Tech Stack**: React, TailwindCSS, JavaScript, Vite
+- **GitHub**: [https://github.com/Gursirat-Singh/Innopulse](https://github.com/Gursirat-Singh/Innopulse)
+
+### Celebrate Mate
+A celebration planning platform that helps users organize and manage events with customized options and interactive UI elements.
+- **Tech Stack**: React, TailwindCSS, JavaScript, Vite
+- **GitHub**: [https://github.com/Gursirat-Singh/CelebrateMate](https://github.com/Gursirat-Singh/CelebrateMate)
 
 ---
 
-## 💡 Suggestions or Feedback?
-Leave a comment on the [YouTube video](https://youtu.be/S9UQItTpwUQ) or open an issue here on GitHub.<br/>
-👉 What should I build next?
+## 👨‍💻 About Gursirat Singh
 
-- A beautiful Landing Page
+Passionate full-stack developer with 2+ years of experience crafting innovative software and web applications. I bridge the gap between design & functionality, delivering scalable solutions that drive results.
 
-- A complete E-commerce site
+- **Experience**: 2+ Years
+- **Projects Completed**: 7+
+- **Technologies Mastered**: 10+
+- **Focus Areas**: Full-Stack Development, 3D Web Experiences, UI/UX Design
 
-- A fun App Clone (YouTube, Netflix, etc.)
+### Development Journey
+- **Programming Foundations & Early Projects** (2022-2023): Started with Python, built school-level projects focusing on logic and problem-solving
+- **Full-Stack Web Development** (2023-2024): Transitioned to MERN stack, built multiple web applications with REST APIs and responsive UIs
+- **Software Development & DSA** (2024-Present): Advanced projects, Data Structures & Algorithms in Java and C++, cloud fundamentals
 
-Or another interactive Portfolio
+---
 
-Let me know!
+## 📬 Contact Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gursirat22)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/1_gursirat_1?igsh=MXJyNDBkZm5icHc2aA==)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat&logo=whatsapp&logoColor=white)](https://wa.me/9417672374)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black)](https://leetcode.com/u/GursiratSingh/)
+[![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Gursirat)
+
+---
+
+## 💡 Feedback & Support
+If you have any feedback or suggestions for my portfolio, feel free to reach out via the contact links above or open an issue on GitHub.
 
 ---
 
 ## ⭐ Like This Project?
-Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content!
+If you found this portfolio helpful or inspiring, please give it a star on GitHub! ⭐
