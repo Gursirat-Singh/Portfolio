@@ -30,7 +30,7 @@ A modern, animated 3D developer portfolio showcasing full-stack development skil
 - 🌌 Parallax backgrounds and particle animations
 - ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
 - 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form with **EmailJS** integration
+- 💌 Working contact form with **Formspree** integration
 - 📋 One-click email copying functionality
 - 🌀 Orbiting circles and flip word animations in hero section
 - 🚀 Lightning-fast development with **Vite**
@@ -47,7 +47,7 @@ A modern, animated 3D developer portfolio showcasing full-stack development skil
 | React Three Fiber | 3D rendering with Three.js in React   |
 | Drei              | Helpers and abstractions for R3F      |
 | Framer Motion     | Animation library for React           |
-| EmailJS           | Form handling and email integration   |
+| Formspree         | Form handling and email integration   |
 | Aceternity UI     | Custom UI components                  |
 | Magic UI          | Prebuilt UI elements and design extras|
 
