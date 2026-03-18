@@ -81,19 +81,41 @@ const Contact = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
+      {/* Background decorations */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-10 w-40 h-40 bg-aqua rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-10 w-48 h-48 bg-mint rounded-full blur-3xl" />
+      </div>
+
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
         ease={80}
-        color={"#ffffff"}
+        color={"#a78bfa"}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-lg p-8 mx-auto border border-white/20 rounded-3xl bg-primary/95 backdrop-blur-md shadow-2xl">
+
+      {/* Section header */}
+      <div className="relative z-10 text-center mb-12 w-full">
+        <div className="inline-block">
+          <h2 className="text-heading relative">
+            Let's Talk
+            <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-aqua via-mint to-royal rounded-full" />
+          </h2>
+          <div className="flex justify-center mt-4 space-x-2">
+            <div className="w-2 h-2 bg-aqua rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-mint rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+            <div className="w-2 h-2 bg-royal rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center max-w-lg p-8 mx-auto border border-white/[0.08] hover:border-aqua/30 rounded-3xl bg-primary/95 backdrop-blur-md shadow-2xl transition-all duration-300">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let's Talk</h2>
+          <h3 className="text-2xl font-bold text-white">Get In Touch</h3>
           <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
+            Whether you're looking to build a new website, improve your existing
             platform, or bring a unique project to life, I'm here to help
           </p>
         </div>

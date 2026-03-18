@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 @theme {
-  --color-primary: #030412;
-  --color-midnight: #06091f;
-  --color-navy: #161a31;
-  --color-indigo: #1f1e39;
-  --color-storm: #282b4b;
-  --color-aqua: #33c2cc;
-  --color-mint: #57db96;
-  --color-royal: #5c33cc;
-  --color-lavender: #7a57db;
-  --color-fuchsia: #ca2f8c;
-  --color-orange: #cc6033;
-  --color-sand: #d6995c;
-  --color-coral: #ea4884;
+  --color-primary: #0a0a0f;
+  --color-midnight: #0d0d1a;
+  --color-navy: #141428;
+  --color-indigo: #1a1a35;
+  --color-storm: #252545;
+  --color-aqua: #a78bfa;
+  --color-mint: #f59e0b;
+  --color-royal: #7c3aed;
+  --color-lavender: #c084fc;
+  --color-fuchsia: #ec4899;
+  --color-orange: #e17055;
+  --color-sand: #fbbf24;
+  --color-coral: #f472b6;
   --bg-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
@@ -286,13 +287,19 @@
   }
 }
 
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
 
 body {
-  background: #030412;
-  font-family: "Funnel Display", sans-serif;
-  color: #f8fafc;
+  background: #0a0a0f;
+  font-family: "Inter", "Funnel Display", sans-serif;
+  color: #f0f0f5;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-image: radial-gradient(circle at 1px 1px, rgba(167, 139, 250, 0.04) 1px, transparent 0);
+  background-size: 32px 32px;
 }
 
 .c-space {
@@ -304,11 +311,11 @@ body {
 }
 
 .section-spacing {
-  @apply min-h-screen mt-20 md:mt-30;
+  @apply min-h-screen py-24 md:py-32;
 }
 
 .text-heading {
-  @apply font-bold text-3xl md:text-4xl;
+  @apply font-bold text-3xl md:text-5xl tracking-tight;
 }
 
 .headtext {
@@ -354,14 +361,14 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl border border-white/[0.06];
 }
 
 .grid-special-color {
-  @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-royal/80 to-lavender/60 rounded-2xl border border-white/[0.08];
 }
 .grid-black-color {
-  @apply p-6 bg-gradient-to-tl from-[#3A3A3A] via-[#242424] to-[#3A3A3A] rounded-2xl;
+  @apply p-6 bg-gradient-to-tl from-[#2a2a3a] via-[#1a1a2e] to-[#2a2a3a] rounded-2xl border border-white/[0.06];
 }
 
 /* Contact Section*/

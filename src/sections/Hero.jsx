@@ -112,7 +112,7 @@ const Hero = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md lg:max-w-lg h-96 lg:h-[500px]">
               {/* Glow effect behind 3D model */}
-              <div className="absolute inset-0 bg-gradient-radial from-aqua/30 via-transparent to-transparent rounded-full blur-3xl scale-150" />
+              <div className="absolute inset-0 bg-gradient-radial from-aqua/20 via-royal/10 to-transparent rounded-full blur-3xl scale-150" />
 
               <Canvas camera={{ position: [0, 1, 3] }} className="rounded-2xl">
                 <Suspense fallback={<Loader />}>

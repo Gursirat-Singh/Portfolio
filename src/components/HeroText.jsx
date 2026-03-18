@@ -54,11 +54,11 @@ const HeroText = () => {
               words={words}
               className="font-black text-9xl"
               style={{
-                background: 'linear-gradient(90deg, #33c2cc, #57db96, #5c33cc)',
+                background: 'linear-gradient(90deg, #a78bfa, #f59e0b, #7c3aed)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                filter: 'drop-shadow(0 0 20px rgba(51, 194, 204, 0.5))'
+                filter: 'drop-shadow(0 0 25px rgba(167, 139, 250, 0.5))'
               }}
             />
           </motion.div>

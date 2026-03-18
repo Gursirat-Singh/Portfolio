@@ -41,31 +41,55 @@ const Projects = () => {
       ref={sectionRef}
       id="work"
       onMouseMove={handleMouseMove}
-      className={`relative c-space section-spacing transition-all duration-1000 ${
+      className={`relative c-space section-spacing transition-all duration-1000 overflow-hidden ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <motion.h2
-        className="text-heading"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
-      >
-        My Selected Projects
-      </motion.h2>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-40 right-20 w-48 h-48 bg-aqua rounded-full blur-3xl" />
+        <div className="absolute bottom-40 left-20 w-56 h-56 bg-mint rounded-full blur-3xl" />
+      </div>
+      {/* Section header */}
+      <div className="relative z-10 text-center mb-16">
+        <div className="inline-block">
+          <motion.h2
+            className="text-heading relative"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+          >
+            My Selected Projects
+            <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-aqua via-mint to-royal rounded-full" />
+          </motion.h2>
+          <div className="flex justify-center mt-4 space-x-2">
+            <div className="w-2 h-2 bg-aqua rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-mint rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+            <div className="w-2 h-2 bg-royal rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+          </div>
+        </div>
+        <motion.p
+          className="text-neutral-400 text-lg mt-6 max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 15 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          A collection of projects showcasing my skills in full-stack development
+        </motion.p>
+      </div>
       <motion.div
-        className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full"
+        className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full"
         initial={{ scaleX: 0 }}
         animate={isVisible ? { scaleX: 1 } : { scaleX: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
         {myProjects.map((project, index) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
           >
             <Project {...project} setPreview={setPreview} />
           </motion.div>

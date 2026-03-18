@@ -145,14 +145,15 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Programming Foundations & Early Projects",
-    job: "Higher Secondary (Class 12)",
-    date: "2022 – 2023",
+    title: "Software Development, DSA & Engineering Practices",
+    job: "Advanced Projects & Skill Development",
+    date: "2024 – Present",
     contents: [
-      "Started coding with Python and built basic school-level projects to understand programming fundamentals.",
-      "Learned core concepts such as variables, control flow, functions, and basic data structures.",
-      "Developed small applications integrating Python with simple databases, focusing on logic building and problem-solving.",
-      "Established a strong foundation in computational thinking and debugging practices.",
+      "Actively developing real-world projects with an emphasis on scalability, performance, and maintainability.",
+      "Focused on Data Structures and Algorithms using Java and C++, solving interview-oriented problems.",
+      "Exploring software engineering practices including testing fundamentals, backend optimization, and system reliability.",
+      "Learning cloud computing fundamentals and deployment concepts, with exposure to AWS services.",
+      "Continuously improving problem-solving ability, code quality, and architectural thinking through hands-on development.",
     ],
   },
   {
@@ -168,15 +169,14 @@ export const experiences = [
     ],
   },
   {
-    title: "Software Development, DSA & Engineering Practices",
-    job: "Advanced Projects & Skill Development",
-    date: "2024 – Present",
+    title: "Programming Foundations & Early Projects",
+    job: "Higher Secondary (Class 12)",
+    date: "2022 – 2023",
     contents: [
-      "Actively developing real-world projects with an emphasis on scalability, performance, and maintainability.",
-      "Focused on Data Structures and Algorithms using Java and C++, solving interview-oriented problems.",
-      "Exploring software engineering practices including testing fundamentals, backend optimization, and system reliability.",
-      "Learning cloud computing fundamentals and deployment concepts, with exposure to AWS services.",
-      "Continuously improving problem-solving ability, code quality, and architectural thinking through hands-on development.",
+      "Started coding with Python and built basic school-level projects to understand programming fundamentals.",
+      "Learned core concepts such as variables, control flow, functions, and basic data structures.",
+      "Developed small applications integrating Python with simple databases, focusing on logic building and problem-solving.",
+      "Established a strong foundation in computational thinking and debugging practices.",
     ],
   },
 

@@ -27,13 +27,42 @@ const Resume = () => {
   }, []);
 
   return (
-    <section className="c-space section-spacing relative" id="resume" ref={containerRef}>
-      {/* Resume Download Card */}
+    <section className="c-space section-spacing relative overflow-hidden" id="resume" ref={containerRef}>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 right-20 w-40 h-40 bg-aqua rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-48 h-48 bg-mint rounded-full blur-3xl" />
+      </div>
+
+      {/* Section Header */}
       <motion.div
-        className="mt-16 mb-8"
+        className="relative z-10 text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ delay: 2.2, duration: 0.8 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="inline-block">
+          <h2 className="text-heading relative">
+            Resume
+            <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-aqua via-mint to-royal rounded-full" />
+          </h2>
+          <div className="flex justify-center mt-4 space-x-2">
+            <div className="w-2 h-2 bg-aqua rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-mint rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+            <div className="w-2 h-2 bg-royal rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+          </div>
+        </div>
+        <p className="text-neutral-400 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+          My professional background and qualifications
+        </p>
+      </motion.div>
+
+      {/* Resume Download Card */}
+      <motion.div
+        className="mt-8 mb-8"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
       >
         <motion.div
           className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-8 text-center hover:border-aqua/30 transition-all duration-300 group"
