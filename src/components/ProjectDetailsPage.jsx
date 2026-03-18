@@ -302,7 +302,7 @@ const ProjectDetailsPage = () => {
                       animate={{ x: [0, 3, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
-                      <img src="assets/arrow-up.svg" className={`rotate-45 ${isMobile ? 'w-4 h-4' : 'w-6 h-6'}`} />
+                      <img src="/assets/arrow-up.svg" className={`rotate-45 ${isMobile ? 'w-4 h-4' : 'w-6 h-6'}`} />
                     </motion.div>
                     <div className="absolute inset-0 bg-gradient-to-r from-mint to-aqua opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                   </motion.a>
@@ -569,7 +569,7 @@ const ProjectDetailsPage = () => {
                     transition={{ duration: 2, repeat: Infinity }}
                   >
                     <img
-                      src="assets/arrow-up.svg"
+                      src="/assets/arrow-up.svg"
                       className={`rotate-45 ${isMobile ? 'w-5 h-5' : 'w-6 h-6'}`}
                     />
                   </motion.div>

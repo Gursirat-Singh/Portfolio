@@ -3,16 +3,16 @@ import { OrbitingCircles } from "./OrbitingCircles";
 export function Frameworks() {
   const skills = [
     // Languages
-    { name: "cplusplus", src: "assets/logos/cplusplus.svg", category: "language" },
+    { name: "cplusplus", src: "/assets/logos/cplusplus.svg", category: "language" },
     { name: "java", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", category: "language" },
-    { name: "javascript", src: "assets/logos/javascript.svg", category: "language" },
-    { name: "html5", src: "assets/logos/html5.svg", category: "language" },
-    { name: "css3", src: "assets/logos/css3.svg", category: "language" },
+    { name: "javascript", src: "/assets/logos/javascript.svg", category: "language" },
+    { name: "html5", src: "/assets/logos/html5.svg", category: "language" },
+    { name: "css3", src: "/assets/logos/css3.svg", category: "language" },
     // Frontend
-    { name: "react", src: "assets/logos/react.svg", category: "frontend" },
-    { name: "tailwindcss", src: "assets/logos/tailwindcss.svg", category: "frontend" },
+    { name: "react", src: "/assets/logos/react.svg", category: "frontend" },
+    { name: "tailwindcss", src: "/assets/logos/tailwindcss.svg", category: "frontend" },
     { name: "framermotion", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg", category: "frontend" },
-    { name: "threejs", src: "assets/logos/threejs.svg", category: "frontend" },
+    { name: "threejs", src: "/assets/logos/threejs.svg", category: "frontend" },
     { name: "reactthreefiber", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", category: "frontend" },
     // Backend
     { name: "nodejs", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", category: "backend" },
@@ -22,10 +22,10 @@ export function Frameworks() {
     { name: "mernstack", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", category: "fullstack" },
     { name: "restapis", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", category: "fullstack" },
     // Tools
-    { name: "git", src: "assets/logos/git.svg", category: "tools" },
-    { name: "github", src: "assets/logos/github.svg", category: "tools" },
+    { name: "git", src: "/assets/logos/git.svg", category: "tools" },
+    { name: "github", src: "/assets/logos/github.svg", category: "tools" },
     { name: "postman", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", category: "tools" },
-    { name: "vitejs", src: "assets/logos/vitejs.svg", category: "tools" },
+    { name: "vitejs", src: "/assets/logos/vitejs.svg", category: "tools" },
     // Cloud (Basics)
     { name: "aws", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", category: "cloud" },
   ];

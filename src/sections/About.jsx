@@ -7,20 +7,20 @@ const skillCategories = [
     title: "Languages",
     color: "#a78bfa",
     skills: [
-      { name: "JavaScript", icon: "assets/logos/javascript.svg" },
+      { name: "JavaScript", icon: "/assets/logos/javascript.svg" },
       { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-      { name: "C++", icon: "assets/logos/cplusplus.svg" },
+      { name: "C++", icon: "/assets/logos/cplusplus.svg" },
     ]
   },
   {
     title: "Frontend",
     color: "#f59e0b",
     skills: [
-      { name: "React", icon: "assets/logos/react.svg" },
-      { name: "Tailwind", icon: "assets/logos/tailwindcss.svg" },
-      { name: "Three.js", icon: "assets/logos/threejs.svg" },
-      { name: "Vite", icon: "assets/logos/vitejs.svg" },
+      { name: "React", icon: "/assets/logos/react.svg" },
+      { name: "Tailwind", icon: "/assets/logos/tailwindcss.svg" },
+      { name: "Three.js", icon: "/assets/logos/threejs.svg" },
+      { name: "Vite", icon: "/assets/logos/vitejs.svg" },
     ]
   },
   {
@@ -36,8 +36,8 @@ const skillCategories = [
     title: "Tools",
     color: "#ec4899",
     skills: [
-      { name: "Git", icon: "assets/logos/git.svg" },
-      { name: "GitHub", icon: "assets/logos/github.svg" },
+      { name: "Git", icon: "/assets/logos/git.svg" },
+      { name: "GitHub", icon: "/assets/logos/github.svg" },
     ]
   }
 ];

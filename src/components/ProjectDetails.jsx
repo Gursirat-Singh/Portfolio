@@ -76,7 +76,7 @@ const ProjectDetails = ({
           whileTap={{ scale: 0.95 }}
         >
           <motion.img
-            src="assets/close.svg"
+            src="/assets/close.svg"
             className="w-5 h-5"
             whileHover={{ rotate: 90 }}
             transition={{ duration: 0.2 }}
@@ -244,7 +244,7 @@ const ProjectDetails = ({
                   transition={{ duration: 2, repeat: Infinity }}
                 >
                   <img
-                    src="assets/arrow-up.svg"
+                    src="/assets/arrow-up.svg"
                     className="w-6 h-6 rotate-45"
                   />
                 </motion.div>
