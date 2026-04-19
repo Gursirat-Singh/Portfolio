@@ -4,16 +4,16 @@
 http://52.66.160.132
 
 ## 📸 EC2 Instance Screenshot (AWS Console)
-![EC2 Console](screenshots/Screenshot 2026-04-19 134834.png)
+![EC2 Console](screenshots/root.png)
 
 ## 👤 User 1 - No Access
-![User 1 Login](screenshots/Screenshot 2026-04-19 134515.png)
+![User 1 Login](screenshots/noAccess.png)
 
 ## 👤 User 2 - EC2 Access
-![User 2 Login](screenshots/Screenshot 2026-04-19 134738.png)
+![User 2 Login](screenshots/Access.png)
 
 ## 🌐 Website Running
-![Website](screenshots/Screenshot 2026-04-19 133640.png)
+![Website](screenshots/Website.png)
 
 ## ⚠️ Challenges Faced
 - EC2 instance was accidentally terminated, had to relaunch from scratch
