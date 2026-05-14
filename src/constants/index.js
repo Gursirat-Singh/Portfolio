@@ -48,7 +48,7 @@ export const myProjects = [
       "Focused on clear information hierarchy and reusable UI components to support future feature expansion.",
       "Integrated routing and state management to handle multiple views and interactions efficiently.",
     ],
-    href: "",
+    href: "https://innopulse-puce.vercel.app",
     github: "https://github.com/Gursirat-Singh/Innopulse",
     logo: "",
     image: "/assets/projects/InnoPulse.png",
@@ -74,72 +74,6 @@ export const myProjects = [
         path: "/assets/logos/vitejs.svg",
       },
     ],
-  },
-  {
-    id: 3,
-    title: "Celebrate Mate",
-    description:
-      "A celebration planning platform that helps users organize and manage events with customized options and interactive UI elements.",
-    subDescription: [
-      "Built a frontend-focused web application using React and Tailwind CSS.",
-      "Designed reusable components for event creation, customization, and display.",
-      "Implemented responsive layouts to ensure consistent experience across devices.",
-      "Focused on clean UI design and smooth user interactions to enhance usability.",
-    ],
-    href: "",
-    github: "https://github.com/Gursirat-Singh/CelebrateMate",
-    logo: "",
-    image: "/assets/projects/CelebrateMaste.png",
-    tags: [
-      {
-        id: 1,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 3,
-        name: "JavaScript",
-        path: "/assets/logos/javascript.svg",
-      },
-      {
-        id: 4,
-        name: "Vite",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-];
-
-export const mySocials = [
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/gursirat22",
-    icon: "/assets/socials/linkedIn.svg",
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/1_gursirat_1?igsh=MXJyNDBkZm5icHc2aA==",
-    icon: "/assets/socials/instagram.svg",
-  },
-  {
-    name: "WhatsApp",
-    href: "https://wa.me/9417672374",
-    icon: "/assets/socials/whatsApp.svg",
-  },
-  {
-    name: "LeetCode",
-    href: "https://leetcode.com/u/GursiratSingh/",
-    icon: "https://leetcode.com/static/images/LeetCode_logo.png",
-  },
-  {
-    name: "Codeforces",
-    href: "https://codeforces.com/profile/Gursirat",
-    icon: "https://imgs.search.brave.com/FTfc-oykeVSCrm5LFs_z03G2pA5uMlznkHQD6JFH0VE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aWNvbnM4LmNvbS9l/eHRlcm5hbC10YWwt/cmV2aXZvLWNvbG9y/LXRhbC1yZXZpdm8v/MTIwMC9leHRlcm5h/bC1jb2RlZm9yY2Vz/LXByb2dyYW1taW5n/LWNvbXBldGl0aW9u/cy1hbmQtY29udGVz/dHMtcHJvZ3JhbW1p/bmctY29tbXVuaXR5/LWxvZ28tY29sb3It/dGFsLXJldml2by5q/cGc",
   },
 ];
 
@@ -229,5 +163,23 @@ export const reviews = [
     username: "@eve",
     body: "So glad I found this. It has changed the game for me.",
     img: "https://robohash.org/eve",
+  },
+];
+
+export const mySocials = [
+  {
+    name: "LinkedIn",
+    icon: "/assets/socials/linkedIn.svg",
+    href: "https://www.linkedin.com/in/gursirat-singh",
+  },
+  {
+    name: "Instagram",
+    icon: "/assets/socials/instagram.svg",
+    href: "#",
+  },
+  {
+    name: "WhatsApp",
+    icon: "/assets/socials/whatsApp.svg",
+    href: "#",
   },
 ];

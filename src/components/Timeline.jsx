@@ -135,10 +135,7 @@ export const Timeline = ({ data }) => {
               {/* Content Card */}
               <div className={`ml-20 md:ml-0 md:w-1/2 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
                 <motion.div
-                  className="relative p-7 rounded-2xl border border-white/[0.06] hover:border-opacity-100 transition-all duration-500 group overflow-hidden"
-                  style={{
-                    background: 'linear-gradient(160deg, rgba(37,37,69,0.5), rgba(20,20,40,0.7))',
-                  }}
+                  className="relative p-7 rounded-2xl glass-panel group overflow-hidden hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500"
                   whileHover={{
                     borderColor: accent.border,
                     y: -4,

@@ -115,10 +115,7 @@ const About = () => {
 
           {/* Introduction Card */}
           <div
-            className="relative p-8 rounded-2xl overflow-hidden border border-white/[0.06] hover:border-aqua/20 transition-all duration-500 group"
-            style={{
-              background: 'linear-gradient(135deg, rgba(37,37,69,0.6), rgba(26,26,53,0.8))',
-            }}
+            className="relative p-8 rounded-2xl overflow-hidden glass-panel transition-all duration-500 group hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)]"
           >
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-16 h-16 border-t border-l border-aqua/20 rounded-tl-2xl" />
@@ -160,10 +157,7 @@ const About = () => {
 
           {/* Stats Card */}
           <div
-            className="relative p-8 rounded-2xl overflow-hidden border border-white/[0.06] hover:border-aqua/20 transition-all duration-500"
-            style={{
-              background: 'linear-gradient(135deg, rgba(42,42,58,0.5), rgba(26,26,46,0.7))',
-            }}
+            className="relative p-8 rounded-2xl overflow-hidden glass-panel transition-all duration-500 hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)]"
           >
             {/* Background globe */}
             <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
@@ -201,10 +195,7 @@ const About = () => {
 
           {/* Skills Showcase */}
           <div
-            className="relative p-8 rounded-2xl overflow-hidden border border-white/[0.06] hover:border-aqua/20 transition-all duration-500"
-            style={{
-              background: 'linear-gradient(135deg, rgba(37,37,69,0.6), rgba(26,26,53,0.8))',
-            }}
+            className="relative p-8 rounded-2xl overflow-hidden glass-panel transition-all duration-500 hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)]"
           >
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-8">
@@ -282,10 +273,7 @@ const About = () => {
 
           {/* CTA Card */}
           <div
-            className="relative p-8 rounded-2xl overflow-hidden border border-white/[0.06] hover:border-aqua/20 transition-all duration-500 group"
-            style={{
-              background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(192,132,252,0.1), rgba(236,72,153,0.08))',
-            }}
+            className="relative p-8 rounded-2xl overflow-hidden glass-panel transition-all duration-500 group hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)]"
           >
             {/* Animated gradient border effect */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-aqua/10 via-mint/5 to-royal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

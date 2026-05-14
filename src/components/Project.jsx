@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 
@@ -14,12 +14,27 @@ const Project = ({
 }) => {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const cardRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (cardRef.current) {
+      const rect = cardRef.current.getBoundingClientRect();
+      setMousePosition({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    }
+  };
 
   return (
     <motion.div
-      className="group relative rounded-2xl overflow-hidden border border-white/[0.06] hover:border-aqua/25 transition-all duration-500"
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      className="group relative rounded-2xl overflow-hidden glass-panel spotlight-border transition-all duration-500"
       style={{
-        background: 'linear-gradient(160deg, rgba(37,37,69,0.5), rgba(20,20,40,0.8))',
+        '--mouse-x': `${mousePosition.x}px`,
+        '--mouse-y': `${mousePosition.y}px`,
       }}
       onMouseEnter={() => {
         setPreview(image);
@@ -32,6 +47,13 @@ const Project = ({
       whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
     >
+      {/* Dynamic spotlight glow inside */}
+      <div 
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        style={{
+          background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.04), transparent 40%)`,
+        }}
+      />
       {/* Project Image - Taller */}
       <div className="relative h-56 overflow-hidden">
         <motion.img
@@ -43,8 +65,8 @@ const Project = ({
         />
 
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-br from-aqua/5 via-transparent to-royal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         {/* Top-right action buttons */}
         <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
@@ -78,7 +100,7 @@ const Project = ({
 
         {/* Bottom of image: project number badge */}
         <div className="absolute bottom-4 left-5">
-          <span className="text-[10px] font-bold tracking-wider uppercase text-aqua/60">
+          <span className="text-[10px] font-bold tracking-widest uppercase text-white/50">
             Project {String(id).padStart(2, '0')}
           </span>
         </div>
@@ -148,7 +170,7 @@ const Project = ({
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
         style={{
-          background: 'linear-gradient(105deg, transparent 40%, rgba(167,139,250,0.03) 45%, rgba(167,139,250,0.06) 50%, rgba(167,139,250,0.03) 55%, transparent 60%)',
+          background: 'linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 55%, transparent 60%)',
           backgroundSize: '200% 100%',
           animation: isHovered ? 'shimmer 2s ease infinite' : 'none',
         }}

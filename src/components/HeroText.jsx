@@ -8,8 +8,8 @@ const HeroText = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const handleScrollToAbout = () => {
-    const element = document.getElementById('about');
+  const handleScrollToWork = () => {
+    const element = document.getElementById('work');
     if (element) {
       const offset = 80;
       const elementPosition = element.offsetTop - offset;
@@ -23,9 +23,20 @@ const HeroText = () => {
   return (
     <div className="z-10 mt-20 text-center md:mt-32 md:text-left px-5 lg:px-15">
       {/* Desktop View */}
-      <div className="flex-col hidden md:flex">
+      <div className="flex-col hidden md:flex items-start">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="mb-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
+        >
+          <div className="w-2 h-2 rounded-full bg-mint animate-pulse" />
+          <span className="text-xs font-medium text-neutral-300 tracking-wide uppercase">Available for new opportunities</span>
+        </motion.div>
+        
         <motion.h1
-          className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent"
+          className="text-6xl lg:text-7xl font-bold mb-4 tracking-tighter bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -33,9 +44,9 @@ const HeroText = () => {
         >
           Hi, I'm Gursirat
         </motion.h1>
-        <div className="flex flex-col items-start space-y-2">
+        <div className="flex flex-col items-start space-y-1">
           <motion.p
-            className="text-6xl font-bold leading-tight text-neutral-400"
+            className="text-5xl lg:text-6xl font-semibold leading-tight text-neutral-400 tracking-tight"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -50,20 +61,20 @@ const HeroText = () => {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="drop-shadow-lg"
           >
-            <FlipWords
+              <FlipWords
               words={words}
-              className="font-black text-9xl"
+              className="font-black text-8xl lg:text-9xl tracking-tighter"
               style={{
-                background: 'linear-gradient(90deg, #a78bfa, #f59e0b, #7c3aed)',
+                background: 'linear-gradient(90deg, #ffffff, #a78bfa)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                filter: 'drop-shadow(0 0 25px rgba(167, 139, 250, 0.5))'
+                filter: 'drop-shadow(0 0 30px rgba(167, 139, 250, 0.4))'
               }}
             />
           </motion.div>
           <motion.p
-            className="text-5xl font-bold leading-tight text-neutral-400"
+            className="text-5xl lg:text-6xl font-semibold leading-tight text-neutral-400 tracking-tight"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -80,10 +91,16 @@ const HeroText = () => {
           transition={{ delay: 1.7, duration: 0.8 }}
         >
           <button
-            onClick={handleScrollToAbout}
-            className="px-8 py-4 bg-gradient-to-r from-aqua to-mint text-black font-bold rounded-full hover:from-mint hover:to-aqua transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-aqua/50"
+            onClick={handleScrollToWork}
+            className="relative overflow-hidden px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-medium rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(167,139,250,0.3)] hover:border-aqua/50 group"
           >
-            Explore My Work
+            <span className="relative z-10 flex items-center gap-2">
+              Explore My Work
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-aqua/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
           <a
             href="#contact"
@@ -99,7 +116,7 @@ const HeroText = () => {
                 });
               }
             }}
-            className="px-8 py-4 border-2 border-aqua text-aqua font-bold rounded-full hover:bg-aqua hover:text-black transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-4 bg-transparent text-neutral-300 hover:text-white font-medium rounded-full transition-colors duration-300 flex items-center"
           >
             Get In Touch
           </a>
@@ -107,9 +124,20 @@ const HeroText = () => {
       </div>
 
       {/* Mobile View */}
-      <div className="flex flex-col space-y-4 md:hidden">
+      <div className="flex flex-col space-y-4 md:hidden items-center text-center">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="mb-2 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
+        >
+          <div className="w-2 h-2 rounded-full bg-mint animate-pulse" />
+          <span className="text-[10px] font-medium text-neutral-300 tracking-wide uppercase">Available for work</span>
+        </motion.div>
+        
         <motion.h1
-          className="text-4xl font-bold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent"
+          className="text-4xl font-bold bg-gradient-to-br from-white to-neutral-500 bg-clip-text text-transparent tracking-tighter"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -117,9 +145,9 @@ const HeroText = () => {
         >
           Hi, I'm Gursirat
         </motion.h1>
-        <div className="space-y-2">
+        <div className="space-y-1">
           <motion.p
-            className="text-4xl font-bold text-neutral-400"
+            className="text-3xl font-semibold text-neutral-400 tracking-tight"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -135,11 +163,18 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold bg-gradient-to-r from-aqua to-mint bg-clip-text text-transparent text-6xl"
+              className="font-black text-6xl tracking-tighter"
+              style={{
+                background: 'linear-gradient(90deg, #ffffff, #a78bfa)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 0 15px rgba(167, 139, 250, 0.4))'
+              }}
             />
           </motion.div>
           <motion.p
-            className="text-3xl font-bold text-neutral-400"
+            className="text-3xl font-semibold text-neutral-400 tracking-tight"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -156,8 +191,8 @@ const HeroText = () => {
           transition={{ delay: 1.7, duration: 0.8 }}
         >
           <button
-            onClick={handleScrollToAbout}
-            className="px-6 py-3 bg-gradient-to-r from-aqua to-mint text-black font-bold rounded-full hover:from-mint hover:to-aqua transition-all duration-300 transform hover:scale-105"
+            onClick={handleScrollToWork}
+            className="relative overflow-hidden px-8 py-3.5 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-medium rounded-full transition-all duration-300"
           >
             Explore My Work
           </button>
@@ -173,7 +208,7 @@ const HeroText = () => {
                 });
               }
             }}
-            className="px-6 py-3 border-2 border-aqua text-aqua font-bold rounded-full hover:bg-aqua hover:text-black transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-3 text-neutral-300 font-medium hover:text-white transition-colors"
           >
             Get In Touch
           </button>

@@ -293,13 +293,17 @@
 }
 
 body {
-  background: #0a0a0f;
-  font-family: "Inter", "Funnel Display", sans-serif;
-  color: #f0f0f5;
+  background: #050505;
+  font-family: "Inter", "Funnel Display", "SF Pro Display", sans-serif;
+  color: #ffffff;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-image: radial-gradient(circle at 1px 1px, rgba(167, 139, 250, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
   background-size: 32px 32px;
+}
+
+.text-heading {
+  @apply font-bold text-4xl md:text-6xl tracking-tight text-white;
 }
 
 .c-space {
@@ -319,7 +323,7 @@ body {
 }
 
 .headtext {
-  @apply mt-2 mb-2 text-xl;
+  @apply mt-2 mb-2 text-xl tracking-tight font-semibold text-neutral-200;
 }
 
 .subtext {
@@ -361,14 +365,49 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl border border-white/[0.06];
+  @apply p-6 bg-white/[0.02] backdrop-blur-3xl rounded-2xl border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
 }
 
 .grid-special-color {
-  @apply p-6 bg-gradient-to-b from-royal/80 to-lavender/60 rounded-2xl border border-white/[0.08];
+  @apply p-6 bg-white/[0.03] backdrop-blur-3xl rounded-2xl border border-white/[0.12] shadow-[0_8px_32px_0_rgba(0,0,0,0.4)];
 }
+
 .grid-black-color {
-  @apply p-6 bg-gradient-to-tl from-[#2a2a3a] via-[#1a1a2e] to-[#2a2a3a] rounded-2xl border border-white/[0.06];
+  @apply p-6 bg-black/40 backdrop-blur-3xl rounded-2xl border border-white/[0.06];
+}
+
+/* Premium Utilities */
+.glass-panel {
+  @apply bg-white/[0.02] backdrop-blur-xl border border-white/[0.08] shadow-2xl;
+}
+
+.spotlight-border {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.spotlight-border::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.3),
+    transparent 40%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.spotlight-border:hover::before {
+  opacity: 1;
 }
 
 /* Contact Section*/

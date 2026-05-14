@@ -65,7 +65,7 @@ const Resume = () => {
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         <motion.div
-          className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-8 text-center hover:border-aqua/30 transition-all duration-300 group"
+          className="glass-panel rounded-2xl p-8 text-center hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 group"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.3 }}
         >
@@ -109,7 +109,7 @@ const Resume = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 2.8, duration: 0.6 }}
           >
-            <div className="bg-gradient-to-br from-black/10 to-black/5 backdrop-blur-sm border border-white/5 rounded-xl p-6">
+            <div className="bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-xl p-6">
               <motion.h4
                 className="text-aqua font-semibold mb-4 text-center"
                 initial={{ opacity: 0 }}
@@ -161,7 +161,7 @@ const Resume = () => {
 
             {/* PDF Embed Container */}
             <motion.div
-              className="relative bg-gradient-to-br from-black/20 to-black/10 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden"
+              className="relative bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-xl overflow-hidden"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
               transition={{ delay: 3.1, duration: 0.5 }}
