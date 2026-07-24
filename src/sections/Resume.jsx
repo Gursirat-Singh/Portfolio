@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { TiltCard } from "../components/TiltCard";
+import { MagneticButton } from "../components/MagneticButton";
 
 const Resume = () => {
   const containerRef = useRef(null);
@@ -160,15 +162,16 @@ const Resume = () => {
             </motion.h4>
 
             {/* PDF Embed Container */}
-            <motion.div
-              className="relative bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-xl overflow-hidden"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-              transition={{ delay: 3.1, duration: 0.5 }}
-            >
+            <TiltCard maxTilt={5}>
+              <motion.div
+                className="relative bg-white/[0.02] backdrop-blur-md border border-white/5 rounded-xl overflow-hidden"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+                transition={{ delay: 3.1, duration: 0.5 }}
+              >
               {/* PDF Iframe */}
               <iframe
-                src="/assets/Gursirat_Singh_Intern.pdf#page=1"
+                src="/assets/Gursirat_Singh_Resume.pdf#page=1"
                 width="100%"
                 height="500"
                 style={{
@@ -187,8 +190,8 @@ const Resume = () => {
                 transition={{ duration: 0.3 }}
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/assets/Gursirat_Singh_Intern.pdf';
-                  link.download = 'Gursirat_Singh_Intern.pdf';
+                  link.href = '/assets/Gursirat_Singh_Resume.pdf';
+                  link.download = 'Gursirat_Singh_Resume.pdf';
                   link.click();
                 }}
               >
@@ -264,7 +267,8 @@ const Resume = () => {
               >
                 Hover to download
               </motion.div>
-            </motion.div>
+              </motion.div>
+            </TiltCard>
           </motion.div>
 
           <motion.p
@@ -276,10 +280,11 @@ const Resume = () => {
             Get the complete details in my full resume
           </motion.p>
 
-          <motion.a
-            href="/assets/Gursirat_Singh_Intern.pdf"
-            download="Gursirat_Singh_Intern.pdf"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-aqua via-mint to-royal rounded-full text-black font-bold text-lg hover:shadow-2xl hover:shadow-aqua/30 transition-all duration-300 group/download"
+          <MagneticButton
+            as="a"
+            href="/assets/Gursirat_Singh_Resume.pdf"
+            download="Gursirat_Singh_Resume.pdf"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-aqua via-mint to-royal rounded-full text-black font-bold text-lg hover:shadow-2xl hover:shadow-aqua/30 transition-all duration-300 group/download"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, scale: 0.8 }}
@@ -306,7 +311,7 @@ const Resume = () => {
               <div className="w-2 h-2 bg-black rounded-full"></div>
               <div className="w-2 h-2 bg-black rounded-full"></div>
             </motion.div>
-          </motion.a>
+          </MagneticButton>
 
           {/* Decorative elements */}
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-aqua/5 via-transparent to-mint/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />

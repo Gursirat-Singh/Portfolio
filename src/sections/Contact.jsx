@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import { MagneticButton } from "../components/MagneticButton";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -111,7 +112,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center max-w-lg p-8 mx-auto border border-white/[0.08] hover:border-aqua/30 rounded-3xl bg-primary/95 backdrop-blur-md shadow-2xl transition-all duration-300">
+      <div className="flex flex-col items-center justify-center max-w-lg p-8 mx-auto border border-white/[0.08] hover:border-aqua/30 focus-within:border-aqua/50 focus-within:shadow-[0_0_30px_rgba(45,212,191,0.2)] rounded-3xl bg-primary/95 backdrop-blur-md shadow-2xl transition-all duration-500 group">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h3 className="text-2xl font-bold text-white">Get In Touch</h3>
           <p className="font-normal text-neutral-400">
@@ -179,13 +180,14 @@ const Contact = () => {
             />
           </div>
           <input type="hidden" name="_gotcha" />
-          <button
+          <MagneticButton
+            as="button"
             type="submit"
             disabled={isLoading}
-            className="w-full px-1 py-3 text-lg text-center rounded-lg cursor-pointer bg-radial from-lavender to-royal hover-animation shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-1 py-4 text-lg text-center rounded-xl font-bold cursor-pointer bg-gradient-to-r from-aqua via-mint to-royal text-black hover-animation shadow-lg hover:shadow-aqua/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
           >
-            {!isLoading ? "Send" : "Sending..."}
-          </button>
+            {!isLoading ? "Send Message" : "Sending..."}
+          </MagneticButton>
         </form>
       </div>
     </section>

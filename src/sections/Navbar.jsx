@@ -126,7 +126,7 @@ const Navbar = () => {
       <motion.div
         className={`fixed inset-x-0 z-50 w-full transition-all duration-500 ${
           isScrolled
-            ? 'backdrop-blur-2xl shadow-2xl'
+            ? 'backdrop-blur-2xl shadow-2xl before:absolute before:inset-0 before:-z-10 before:bg-[url(/assets/noise.png)] before:opacity-[0.03] before:mix-blend-overlay'
             : 'bg-transparent'
         }`}
         style={{

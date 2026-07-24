@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion } from "motion/react";
+import { motion, useMotionValue, useSpring } from "motion/react";
 import { useNavigate } from "react-router-dom";
 
 const Project = ({
@@ -17,13 +17,24 @@ const Project = ({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRef = useRef(null);
 
+  const rotateX = useMotionValue(0);
+  const rotateY = useMotionValue(0);
+  const springRotateX = useSpring(rotateX, { stiffness: 300, damping: 30 });
+  const springRotateY = useSpring(rotateY, { stiffness: 300, damping: 30 });
+
   const handleMouseMove = (e) => {
     if (cardRef.current) {
       const rect = cardRef.current.getBoundingClientRect();
+      const clientX = e.clientX - rect.left;
+      const clientY = e.clientY - rect.top;
       setMousePosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
+        x: clientX,
+        y: clientY,
       });
+      const xPct = clientX / rect.width - 0.5;
+      const yPct = clientY / rect.height - 0.5;
+      rotateX.set(-yPct * 15);
+      rotateY.set(xPct * 15);
     }
   };
 
@@ -31,10 +42,15 @@ const Project = ({
     <motion.div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="group relative rounded-2xl overflow-hidden glass-panel spotlight-border transition-all duration-500"
+      onClick={() => navigate(`/project/${id}`)}
+      className="group relative rounded-2xl overflow-hidden glass-panel spotlight-border transition-all duration-500 cursor-pointer"
       style={{
         '--mouse-x': `${mousePosition.x}px`,
         '--mouse-y': `${mousePosition.y}px`,
+        rotateX: springRotateX,
+        rotateY: springRotateY,
+        transformStyle: "preserve-3d",
+        transformPerspective: 1000
       }}
       onMouseEnter={() => {
         setPreview(image);
@@ -43,8 +59,10 @@ const Project = ({
       onMouseLeave={() => {
         setPreview(null);
         setIsHovered(false);
+        rotateX.set(0);
+        rotateY.set(0);
       }}
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -6, z: 20 }}
       transition={{ duration: 0.3 }}
     >
       {/* Dynamic spotlight glow inside */}
@@ -60,8 +78,8 @@ const Project = ({
           src={image}
           alt={title}
           className="w-full h-full object-cover"
-          animate={{ scale: isHovered ? 1.08 : 1 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          animate={{ scale: isHovered ? 1.15 : 1 }}
+          transition={{ duration: 8, ease: "linear" }}
         />
 
         {/* Gradient overlays */}
@@ -122,9 +140,12 @@ const Project = ({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5">
             {tags.slice(0, 5).map((tag, i) => (
-              <div
+              <motion.div
                 key={tag.id}
                 className="group/icon relative"
+                initial={{ y: 0 }}
+                animate={{ y: isHovered ? -6 : 0 }}
+                transition={{ duration: 0.4, delay: i * 0.05, type: "spring", stiffness: 300 }}
               >
                 <div
                   className="w-8 h-8 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center hover:bg-aqua/10 hover:border-aqua/30 transition-all duration-200"
@@ -139,7 +160,7 @@ const Project = ({
                 <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#1a1a35] border border-white/10 rounded-md text-[10px] text-neutral-300 whitespace-nowrap opacity-0 group-hover/icon:opacity-100 scale-90 group-hover/icon:scale-100 transition-all duration-200 pointer-events-none z-10">
                   {tag.name}
                 </div>
-              </div>
+              </motion.div>
             ))}
             {tags.length > 5 && (
               <span className="text-[10px] text-neutral-500 ml-1">+{tags.length - 5}</span>
@@ -148,7 +169,10 @@ const Project = ({
 
           {/* View details arrow */}
           <motion.button
-            onClick={() => navigate(`/project/${id}`)}
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/project/${id}`);
+            }}
             className="flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-aqua transition-colors duration-300 group/btn"
           >
             <span>Details</span>

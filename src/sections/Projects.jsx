@@ -83,7 +83,7 @@ const Projects = () => {
         animate={isVisible ? { scaleX: 1 } : { scaleX: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-7xl mx-auto px-4">
         {myProjects.map((project, index) => (
           <motion.div
             key={project.id}

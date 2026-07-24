@@ -75,6 +75,49 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 3,
+    title: "VestPulse",
+    description:
+      "A full-stack AI investment research platform with a 7-node fan-out/fan-in workflow that parallelized financial, news, competitor, and risk analysis.",
+    subDescription: [
+      "Built a full-stack AI investment research platform using Next.js, TypeScript, LangGraph.js, Gemini API, and RESTful APIs with a 7-node fan-out/fan-in workflow that parallelized financial, news, competitor, and risk analysis, reducing pipeline latency by 60%.",
+      "Consolidated seven sequential Gemini API calls into a single structured-output workflow using Zod validation, reducing external API usage by 85% while improving performance and reliability.",
+      "Secured REST API integrations with schema validation, Redis-backed rate limiting (5 requests/min/IP), and input verification.",
+      "Deployed on Vercel with multi-provider financial data failover, client-side PDF export, responsive UI, and Lighthouse scores of 99 Performance, 100 Accessibility, 100 Best Practices, and 100 SEO.",
+    ],
+    href: "https://vest-pulse.vercel.app",
+    github: "https://github.com/Gursirat-Singh/VestPulse",
+    logo: "",
+    image: "/assets/projects/VestPulse.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
+      {
+        id: 3,
+        name: "LangGraph",
+        path: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'></circle><circle cx='6' cy='12' r='3'></circle><circle cx='18' cy='19' r='3'></circle><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'></line><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'></line></svg>",
+      },
+      {
+        id: 4,
+        name: "Gemini",
+        path: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'><path d='M12 2L15 9l7 3-7 3-3 7-3-7-7-3 7-3z'/></svg>",
+      },
+      {
+        id: 5,
+        name: "Redis",
+        path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      },
+    ],
+  },
 ];
 
 export const experiences = [

@@ -9,15 +9,23 @@ import Resume from "./sections/Resume";
 import Contact from "./sections/Contact";
 import Footer from './sections/Footer';
 import ProjectDetailsPage from './components/ProjectDetailsPage';
+import CursorGlow from './components/CursorGlow';
+import SectionDivider from './components/SectionDivider';
 
 const HomePage = () => (
   <>
+    <CursorGlow />
     <Navbar />
     <Hero />
+    <SectionDivider fromColor="#a78bfa" toColor="#7c3aed" id="hero-about" />
     <About />
+    <SectionDivider fromColor="#7c3aed" toColor="#f59e0b" id="about-projects" />
     <Projects />
+    <SectionDivider fromColor="#f59e0b" toColor="#ec4899" id="projects-experiences" />
     <Experiences />
+    <SectionDivider fromColor="#ec4899" toColor="#a78bfa" id="experiences-resume" />
     <Resume />
+    <SectionDivider fromColor="#a78bfa" toColor="#3b82f6" id="resume-contact" />
     <Contact />
     <Footer/>
   </>

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { TiltCard } from "./TiltCard";
 
 export const Timeline = ({ data }) => {
   const containerRef = useRef(null);
@@ -134,14 +135,15 @@ export const Timeline = ({ data }) => {
 
               {/* Content Card */}
               <div className={`ml-20 md:ml-0 md:w-1/2 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
-                <motion.div
-                  className="relative p-7 rounded-2xl glass-panel group overflow-hidden hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500"
-                  whileHover={{
-                    borderColor: accent.border,
-                    y: -4,
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
+                <TiltCard maxTilt={10}>
+                  <motion.div
+                    className="relative p-7 rounded-2xl glass-panel group overflow-hidden hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500 h-full"
+                    whileHover={{
+                      borderColor: accent.border,
+                      y: -4,
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
                   {/* Subtle top accent bar */}
                   <div
                     className="absolute top-0 left-0 right-0 h-[2px] opacity-60 group-hover:opacity-100 transition-opacity duration-500"
@@ -217,7 +219,8 @@ export const Timeline = ({ data }) => {
                       background: `radial-gradient(ellipse at ${isEven ? '100%' : '0%'} 0%, ${accent.from}08 0%, transparent 70%)`,
                     }}
                   />
-                </motion.div>
+                  </motion.div>
+                </TiltCard>
 
                 {/* Connection line to node - desktop only */}
                 <div

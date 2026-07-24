@@ -1,5 +1,6 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
+import { MagneticButton } from "./MagneticButton";
 
 const HeroText = () => {
   const words = ["Secure", "Modern", "Scalable"];
@@ -32,11 +33,14 @@ const HeroText = () => {
           className="mb-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
         >
           <div className="w-2 h-2 rounded-full bg-mint animate-pulse" />
-          <span className="text-xs font-medium text-neutral-300 tracking-wide uppercase">Available for new opportunities</span>
+          <span className="text-xs font-medium text-neutral-300 tracking-wide uppercase">
+            Available for new opportunities
+            <span className="inline-block w-1.5 h-3 ml-1.5 bg-aqua animate-pulse align-middle opacity-80" />
+          </span>
         </motion.div>
         
         <motion.h1
-          className="text-6xl lg:text-7xl font-bold mb-4 tracking-tighter bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent"
+          className="text-6xl lg:text-7xl font-bold mb-4 tracking-tighter bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent animate-text-shimmer bg-[length:200%_auto]"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -90,9 +94,9 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1.7, duration: 0.8 }}
         >
-          <button
+          <MagneticButton
             onClick={handleScrollToWork}
-            className="relative overflow-hidden px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-medium rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(167,139,250,0.3)] hover:border-aqua/50 group"
+            className="relative overflow-hidden px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-medium rounded-full transition-all duration-300 transform hover:shadow-[0_0_40px_rgba(167,139,250,0.3)] hover:border-aqua/50 group"
           >
             <span className="relative z-10 flex items-center gap-2">
               Explore My Work
@@ -101,8 +105,9 @@ const HeroText = () => {
               </svg>
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-aqua/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
-          <a
+          </MagneticButton>
+          <MagneticButton
+            as="a"
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
@@ -116,10 +121,10 @@ const HeroText = () => {
                 });
               }
             }}
-            className="px-8 py-4 bg-transparent text-neutral-300 hover:text-white font-medium rounded-full transition-colors duration-300 flex items-center"
+            className="px-8 py-4 bg-transparent text-neutral-300 hover:text-white font-medium rounded-full transition-colors duration-300 flex items-center cursor-pointer"
           >
             Get In Touch
-          </a>
+          </MagneticButton>
         </motion.div>
       </div>
 
@@ -133,11 +138,14 @@ const HeroText = () => {
           className="mb-2 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
         >
           <div className="w-2 h-2 rounded-full bg-mint animate-pulse" />
-          <span className="text-[10px] font-medium text-neutral-300 tracking-wide uppercase">Available for work</span>
+          <span className="text-[10px] font-medium text-neutral-300 tracking-wide uppercase">
+            Available for work
+            <span className="inline-block w-1 h-2 ml-1 bg-aqua animate-pulse align-middle opacity-80" />
+          </span>
         </motion.div>
         
         <motion.h1
-          className="text-4xl font-bold bg-gradient-to-br from-white to-neutral-500 bg-clip-text text-transparent tracking-tighter"
+          className="text-4xl font-bold bg-gradient-to-br from-white to-neutral-500 bg-clip-text text-transparent tracking-tighter animate-text-shimmer bg-[length:200%_auto]"
           variants={variants}
           initial="hidden"
           animate="visible"

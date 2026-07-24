@@ -42,14 +42,8 @@ const Hero = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      {/* Subtle background overlay for text readability */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(var(--bg-primary-rgb, 3, 4, 18), 0.3) 0%, transparent 50%, rgba(var(--bg-primary-rgb, 3, 4, 18), 0.3) 100%)",
-        }}
-      />
+      {/* Subtle background overlay for text readability and aurora effect */}
+      <div className="absolute inset-0 aurora-bg z-0 opacity-60" />
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden z-5">
@@ -112,9 +106,13 @@ const Hero = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md lg:max-w-lg h-96 lg:h-[500px]">
               {/* Glow effect behind 3D model */}
-              <div className="absolute inset-0 bg-gradient-radial from-aqua/20 via-royal/10 to-transparent rounded-full blur-3xl scale-150" />
+              <div className="absolute inset-0 bg-gradient-radial from-aqua/20 via-royal/10 to-transparent rounded-full blur-3xl scale-150 animate-glow-pulse" />
+              
+              {/* Rotating energy rings */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-aqua/30 rounded-full animate-[spin_12s_linear_infinite]" style={{ borderTopColor: 'transparent', borderRightColor: 'transparent' }} />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] border border-mint/20 rounded-full animate-[spin_18s_linear_infinite_reverse]" style={{ borderBottomColor: 'transparent', borderLeftColor: 'transparent' }} />
 
-              <Canvas camera={{ position: [0, 1, 3] }} className="rounded-2xl">
+              <Canvas camera={{ position: [0, 1, 3] }} className="rounded-2xl relative z-10 animate-float-gentle">
                 <Suspense fallback={<Loader />}>
                   <Float
                     speed={1.5}
